@@ -19,6 +19,7 @@ use App\Http\Controllers\QuestionController;
 // Route::middleware('auth:sanctum')->post('/register', [User::class, 'register']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::resource('/questions', QuestionController::class);
 Route::post('/questions/{id}', [QuestionController::class, 'update']);
